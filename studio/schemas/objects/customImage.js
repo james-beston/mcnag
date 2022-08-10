@@ -1,10 +1,10 @@
-import { IoImageOutline } from 'react-icons/io';
+import FaRegImage from 'react-icons/fa';
 
 export default {
   name: 'customImage',
   title: 'Image',
   type: 'image',
-  icon: IoImageOutline,
+  icon: FaRegImage,
   options: {
     hotspot: true,
   },
