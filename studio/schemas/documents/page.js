@@ -38,7 +38,7 @@ export default {
     {
       name: 'intro',
       title: 'Introduction Text',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'sections',

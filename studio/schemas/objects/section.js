@@ -4,18 +4,9 @@ export default {
   type: 'object',
   fields: [
     {
-      name: 'title',
+      name: 'sectionTitle',
       title: 'Title',
       type: 'string',
-    },
-    {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
     },
     {
       name: 'content',
@@ -25,7 +16,7 @@ export default {
   ],
   preview: {
     select: {
-      title: 'name',
+      title: 'sectionTitle',
       media: 'image',
     },
   },
