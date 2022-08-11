@@ -13,6 +13,9 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 w-full">
             <img src="/wave.svg" alt="" className="min-w-full h-auto" />
           </div>
+          <div className="flex flex-col justify-center h-full w-1/2 ml-8">
+            <h1 className="text-4xl text-white uppercase">Marine Conservation Norfolk</h1>
+          </div>
         </div>
       </div>
       <div className="flex">
