@@ -2,11 +2,21 @@ import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
+const navigation = [
+  { name: 'Contact', href: '#' },
+  { name: 'Local Marine Information', href: '#' },
+  { name: 'The Chalk Reef MCZ', href: '#' },
+  { name: 'How To Help', href: '#' },
+  { name: 'Norfolk Beach Cleaners', href: '#' },
+  { name: 'Conference', href: '#' },
+  { name: 'Reports', href: '#' },
+]
+
 export default function Navigation() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="absolute top-0 w-full">
       <Popover as="header" className="relative">
-        <div className="bg-gray-900 pt-6">
+        <div className="bg-mcnag-light-blue/90 py-2.5 drop-shadow-sm">
           <nav
             className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
             aria-label="Global"
@@ -17,12 +27,12 @@ export default function Navigation() {
                   <span className="sr-only">Workflow</span>
                   <img
                     className="h-8 w-auto sm:h-10"
-                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500"
+                    src="/android-chrome-192x192.png"
                     alt=""
                   />
                 </a>
-                <div className="-mr-2 flex items-center md:hidden">
-                  <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+                <div className="-mr-2 flex-0 items-center md:hidden">
+                  <Popover.Button className="bg-black/30 rounded-md p-2 inline-flex items-center justify-center text-white hover:bg-black/50 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     <MenuIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -30,22 +40,11 @@ export default function Navigation() {
               </div>
               <div className="hidden space-x-8 md:flex md:ml-10">
                 {navigation.map((item) => (
-                  <a key={item.name} href={item.href} className="text-base font-medium text-white hover:text-gray-300">
+                  <a key={item.name} href={item.href} className="text-sm font-medium text-white hover:text-blue-200">
                     {item.name}
                   </a>
                 ))}
               </div>
-            </div>
-            <div className="hidden md:flex md:items-center md:space-x-6">
-              <a href="#" className="text-base font-medium text-white hover:text-gray-300">
-                Log in
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
-              >
-                Start free trial
-              </a>
             </div>
           </nav>
         </div>

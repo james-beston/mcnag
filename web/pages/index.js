@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Navigation from '../components/navigation';
 
 export default function Home() {
   return (
@@ -8,6 +9,9 @@ export default function Home() {
         <meta name="description" content="Marine Conservation for Norfolk Action Group website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="sticky top-0 z-10">
+        <Navigation />
+      </div>
       <div className="flex h-3/4 md:h-2/3 lg:h-full flex-col w-full bg-gradient-to-b from-mcnag-light-blue to-mcnag-dark-blue">
         <div className="relative w-full h-full">
           <div className="absolute bottom-0 left-0 w-1/2">
