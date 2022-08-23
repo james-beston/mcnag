@@ -9,6 +9,7 @@ import customImage from './objects/customImage'
 import section from './objects/section'
 
 // Documents
+import home from './documents/home'
 import page from './documents/page'
 import post from './documents/post'
 
@@ -22,6 +23,7 @@ export default createSchema({
     customImage,
     section,
     // Documents
+    home,
     page,
     post,
   ]),
