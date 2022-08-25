@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Header() {
   return (
     <div className="flex h-full flex-col w-full bg-gradient-to-b from-mcnag-light-blue to-mcnag-dark-blue">
-      <div className="flex mt-56 lg:mt-0 lg:items-center w-full h-full">
+      <div className="flex mt-56 lg:mt-0 lg:items-center w-full h-full border-b-2 border-white">
         <div className="absolute bottom-0 left-0 w-1/2 lg:w-1/3" aria-hidden="true">
           <Image
             src="/wave-left.svg"
