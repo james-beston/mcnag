@@ -7,7 +7,6 @@ function classNames(...classes) {
 }
 
 export default function Dropdown({ props }) {
-  console.log(props)
   return (
     <Popover className="relative">
       {({ open }) => (
