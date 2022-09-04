@@ -5,6 +5,7 @@ export const homeQuery = groq`
   _id,
   title,
   mainImage,
+  mainImageCredit,
   content
 }
 `

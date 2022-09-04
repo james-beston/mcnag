@@ -5,6 +5,8 @@ import Footer from '@components/footer'
 import { getClient } from '@lib/sanity.server'
 import { homeQuery } from '@lib/queries'
 import { PortableText } from '@portabletext/react'
+import { urlFor } from '@lib/sanity'
+import Image from 'next/image'
 
 export default function Home({ data, preview }) {
   const [item] = data.home
@@ -19,8 +21,21 @@ export default function Home({ data, preview }) {
         <Navigation />
       </div>
       <Header />
-      <div className="max-w-6xl mx-6 xl:mx-auto mt-12">
+      <div className="flex flex-col space-y-6 max-w-6xl mx-6 xl:mx-auto mt-12">
         <h1 className="text-5xl lg:text-7xl font-extrabold text-mcnag-dark-blue">{item.title}</h1>
+        <figure>
+          <div className="relative drop-shadow-lg">
+            <Image
+              src={urlFor(item.mainImage).width(1600).height(960).url()}
+              alt={item.title}
+              width={1600}
+              height={960}
+            />
+          </div>
+          <figcaption>
+            <span className="text-sm text-slate-500">Image: &copy;{item.mainImageCredit}</span>
+          </figcaption>
+        </figure>
         <div className="mt-12 prose lg:prose-xl max-w-none">
           <PortableText value={item.content} />
         </div>

@@ -17,6 +17,11 @@ export default {
       }
     },
     {
+      name: 'mainImageCredit',
+      title: 'Main image credit',
+      type: 'string',
+    },
+    {
       name: 'content',
       title: 'Content',
       type: 'blockContent',
