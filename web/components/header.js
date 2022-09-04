@@ -22,7 +22,7 @@ export default function Header() {
             layout="responsive"
           />
         </div>
-        <div className="w-full md:w-1/2 mx-6 lg:ml-24 xl:ml-54 2xl:ml-80">
+        <div className="w-full md:w-1/2 mx-6 lg:ml-24 xl:ml-54 2xl:ml-96">
           <Image
             src="/mcnag-name.svg"
             alt="Marine Conservation Norfolk Action Group"

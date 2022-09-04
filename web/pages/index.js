@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navigation from '@components/navigation'
 import Header from '@components/header'
+import Footer from '@components/footer'
 import { getClient } from '@lib/sanity.server'
 import { homeQuery } from '@lib/queries'
 import { PortableText } from '@portabletext/react'
@@ -18,11 +19,14 @@ export default function Home({ data, preview }) {
         <Navigation />
       </div>
       <Header />
-      <div className="max-w-7xl mx-auto mt-12">
-        <h1 className="text-5xl font-bold text-mcnag-dark-blue">{item.title}</h1>
-        <PortableText value={item.content} />
+      <div className="max-w-6xl mx-6 xl:mx-auto mt-12">
+        <h1 className="text-5xl lg:text-7xl font-extrabold text-mcnag-dark-blue">{item.title}</h1>
+        <div className="mt-12 prose lg:prose-xl max-w-none">
+          <PortableText value={item.content} />
+        </div>
       </div>
-    </div>
+      <Footer />
+    </div>    
   )
 }
 
