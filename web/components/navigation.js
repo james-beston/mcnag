@@ -6,6 +6,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Dropdown from './dropdown'
 
 const navigation = [
+  { name: 'About', type: 'single', href: '#' },
   { name: 'Contact', type: 'single', href: '#' },
   { name: 'Marine Information',
     type: 'list',
