@@ -9,6 +9,7 @@ import dropdown from './objects/dropdown'
 import section from './objects/section'
 
 // Documents
+import about from './documents/about'
 import boardMember from './documents/boardMember'
 import home from './documents/home'
 import page from './documents/page'
@@ -25,6 +26,7 @@ export default createSchema({
     dropdown,
     section,
     // Documents
+    about,
     boardMember,
     home,
     page,
