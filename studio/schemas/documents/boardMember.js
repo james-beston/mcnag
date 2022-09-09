@@ -1,7 +1,10 @@
+import { HiOutlineUserCircle } from 'react-icons/hi'
+
 export default {
-  name: 'author',
-  title: 'Author',
+  name: 'boardMember',
+  title: 'Board Member',
   type: 'document',
+  icon: HiOutlineUserCircle,
   fields: [
     {
       name: 'name',
