@@ -25,7 +25,7 @@ const navigation = [
 
 export default function Navigation() {
   return (
-    <div className="absolute top-0 w-full">
+    <div className="sticky top-0 w-full z-10">
       <Popover as="header" className="relative">
         <div className="bg-mcnag-light-blue/90 py-2.5 drop-shadow-sm">
           <nav
