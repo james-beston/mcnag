@@ -11,10 +11,17 @@ export const homeQuery = groq`
 `
 
 export const aboutQuery = groq`
-  *[_type == 'about']{
-    title,
-    "slug": slug.current,
-    introduction,
-    members
+*[_type == 'about']{
+  title,
+  "slug": slug.current,
+  mainImage,
+  mainImageCredit,
+  introduction,
+  "members": *[_type == 'boardMember']{
+    bio,
+    image,
+    name,
+    "slug": slug.current
   }
+}
 `

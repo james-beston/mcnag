@@ -6,7 +6,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Dropdown from './dropdown'
 
 const navigation = [
-  { name: 'About', type: 'single', href: 'about' },
+  { name: 'About', type: 'single', href: '/about' },
   { name: 'Contact', type: 'single', href: '#' },
   { name: 'Marine Information',
     type: 'list',
@@ -27,7 +27,7 @@ export default function Navigation() {
   return (
     <div className="sticky top-0 w-full z-10">
       <Popover as="header" className="relative">
-        <div className="bg-mcnag-light-blue/90 py-2.5 drop-shadow-sm">
+        <div className="bg-mcnag-light-blue/90 backdrop-blur py-2.5 drop-shadow-sm">
           <nav
             className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
             aria-label="Global"
@@ -52,10 +52,10 @@ export default function Navigation() {
                 </div>
               </div>
               <div className="hidden space-x-8 md:flex md:ml-10 items-center">
-                {navigation.map((item) => (
+                {navigation.map((item, index) => (
                   item.type === 'single'
                   ? (
-                    <Link key={item.name} href={item.href}>
+                    <Link key={index} href={item.href}>
                       <a className="text-sm font-medium text-white hover:text-blue-100">
                         {item.name}
                       </a>
