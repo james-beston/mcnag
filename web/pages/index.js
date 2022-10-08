@@ -19,7 +19,7 @@ export default function Home({ data, preview }) {
       </Head>
       <Navigation />
       <Header />
-      <div className="flex flex-col space-y-6 max-w-6xl mx-6 xl:mx-auto">
+      <div className="flex flex-col mt-12 lg:mt-24 space-y-6 lg:space-y-12 max-w-6xl mx-6 xl:mx-auto">
         <h1 className="text-5xl lg:text-7xl font-extrabold text-mcnag-dark-blue">{item.title}</h1>
         <figure>
           <div className="relative drop-shadow-lg">
