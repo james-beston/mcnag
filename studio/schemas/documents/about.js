@@ -19,6 +19,19 @@ export default {
       },
     },
     {
+      name: 'mainImage',
+      title: 'Main Image',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    {
+      name: 'mainImageCredit',
+      title: 'Main image credit',
+      type: 'string',
+    },
+    {
       name: 'introduction',
       title: 'Introduction',
       type: 'blockContent',
