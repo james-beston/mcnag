@@ -17,11 +17,21 @@ export const aboutQuery = groq`
   mainImage,
   mainImageCredit,
   introduction,
-  "members": *[_type == 'boardMember']{
+  members[]->{
     bio,
     image,
     name,
-    "slug": slug.current
+    "slug":slug.current
   }
+}
+`
+
+export const contactQuery = groq`
+*[_type == 'contact']{
+  title,
+  "slug": slug.current,
+  mainImage,
+  mainImageCredit,
+  introduction
 }
 `

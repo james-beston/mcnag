@@ -2,7 +2,6 @@ export default {
   name: 'siteSettings',
   title: 'Site Settings',
   type: 'document',
-  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   fields: [
     {
       name: 'title',
@@ -36,7 +35,11 @@ export default {
       of: [
         {type: 'dropdown'},
         {type: 'reference',
-        to: [{type: 'page'}]}]
+        to: [
+          {type: 'page'},
+          {type: 'about'},
+          {type: 'post'}
+        ]}]
     }
   ]
 }

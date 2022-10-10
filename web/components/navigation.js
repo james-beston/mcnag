@@ -7,7 +7,7 @@ import Dropdown from './dropdown'
 
 const navigation = [
   { name: 'About', type: 'single', href: '/about' },
-  { name: 'Contact', type: 'single', href: '#' },
+  { name: 'Contact', type: 'single', href: '/contact' },
   { name: 'Marine Information',
     type: 'list',
     list: [
@@ -98,11 +98,11 @@ export default function Navigation() {
               </div>
               <div className="pt-5 pb-6">
                 <div className="px-2 space-y-1">
-                  {navigation.map((item) => (
+                  {navigation.map((item, index) => (
                     item.type === 'single'
                   ? (
                       <a
-                        key={item.name}
+                        key={index}
                         href={item.href}
                         className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-blue-50"
                       >
@@ -111,9 +111,9 @@ export default function Navigation() {
                   ) : (
                     <>
                     <p className="block px-3 py-2 rounded-md text-base font-medium text-gray-500">{item.name}</p>
-                    {item.list.map((nav) => (
+                    {item.list.map((nav, index) => (
                       <a
-                        key={nav.name}
+                        key={index}
                         href={nav.href}
                         className="block mx-2 px-3 py-1.5 rounded-md text-sm text-mcnag-dark-blue hover:bg-blue-50"
                       >

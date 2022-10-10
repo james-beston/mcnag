@@ -8,7 +8,7 @@ import { PortableText } from '@portabletext/react'
 import { urlFor } from '@lib/sanity'
 import Image from 'next/image'
 
-export default function Home({ data, preview }) {
+export default function About({ data, preview }) {
   const [item] = data.about
   console.log(item)
   return (
