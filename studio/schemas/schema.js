@@ -11,6 +11,7 @@ import section from './objects/section'
 // Documents
 import about from './documents/about'
 import boardMember from './documents/boardMember'
+import contact from './documents/contact'
 import home from './documents/home'
 import page from './documents/page'
 import post from './documents/post'
@@ -28,6 +29,7 @@ export default createSchema({
     // Documents
     about,
     boardMember,
+    contact,
     home,
     page,
     post,

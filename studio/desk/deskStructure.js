@@ -1,5 +1,5 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { HiOutlineUserGroup, HiOutlineHome } from 'react-icons/hi'
+import { HiOutlineUserGroup, HiOutlineHome, HiOutlineSpeakerphone } from 'react-icons/hi'
 import { BiCog } from 'react-icons/bi'
 
 export default () =>
@@ -30,5 +30,13 @@ export default () =>
           .schemaType('about')
           .documentId('about')
       ),
-      ...S.documentTypeListItems().filter(listItem => !['siteSettings', 'home', 'about'].includes(listItem.getId()))
+      S.listItem()
+        .title('Contact')
+        .icon(HiOutlineSpeakerphone)
+        .child(
+          S.document()
+            .schemaType('contact')
+            .documentId('contact')
+      ),
+      ...S.documentTypeListItems().filter(listItem => !['siteSettings', 'home', 'about', 'contact'].includes(listItem.getId()))
     ])

@@ -14,21 +14,6 @@ export default {
       type: 'text'
     },
     {
-      name: 'instagram',
-      title: 'Instagram URL',
-      type: 'url'
-    },
-    {
-      name: 'facebook',
-      title: 'Facebook URL',
-      type: 'url'
-    },
-    {
-      name: 'twitter',
-      title: 'Twitter URL',
-      type: 'url'
-    },
-    {
       name: 'nav',
       title: 'Website navigation',
       type: 'array',
