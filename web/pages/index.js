@@ -14,8 +14,6 @@ export default function Home({ data, preview }) {
     <div className='h-screen'>
       <Head>
         <title>MCNAG - Marine Conservation for Norfolk Action Group</title>
-        <meta name="description" content="Marine Conservation for Norfolk Action Group website" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
       <Header />

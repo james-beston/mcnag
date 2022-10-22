@@ -32,6 +32,10 @@ export const contactQuery = groq`
   "slug": slug.current,
   mainImage,
   mainImageCredit,
-  introduction
+  introduction,
+  facebook,
+  instagram,
+  twitter,
+  email
 }
 `

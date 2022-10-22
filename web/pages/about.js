@@ -10,13 +10,11 @@ import Image from 'next/image'
 
 export default function About({ data, preview }) {
   const [item] = data.about
-  console.log(item)
+
   return (
     <div className='h-screen'>
       <Head>
         <title>MCNAG - {item.title}</title>
-        <meta name="description" content="Marine Conservation for Norfolk Action Group website" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
         <Navigation />
       <div className="flex flex-col mt-12 lg:mt-24 space-y-6 lg:space-y-12 max-w-6xl mx-6 xl:mx-auto">
