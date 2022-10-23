@@ -5,8 +5,8 @@ export const portableTextComponents = {
   types: {
     customImage: ({value}) =>
       (
-        <figure>
-          <div className="relative drop-shadow-md ">
+        <figure className="space-y-0">
+          <div className="relative drop-shadow-md">
             <Image
               src={urlFor(value).width(1200).height(800).url()}
               alt=""
