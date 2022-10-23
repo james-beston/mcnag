@@ -16,7 +16,7 @@ export default function About({ data, preview }) {
       <Head>
         <title>MCNAG - {item.title}</title>
       </Head>
-        <Navigation />
+      <Navigation />
       <div className="flex flex-col mt-12 lg:mt-24 space-y-6 lg:space-y-12 max-w-6xl mx-6 xl:mx-auto">
         <h1 className="text-5xl lg:text-7xl font-extrabold text-mcnag-dark-blue">{item.title}</h1>
         <figure>
@@ -37,8 +37,8 @@ export default function About({ data, preview }) {
         </div>
         <h2 className="text-3xl lg:text-5xl font-bold text-mcnag-dark-blue">Board Members</h2>
         <div className="space-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-12">
-          {item.members.map((member) => (
-            <Member key={member.slug} props={member} />
+          {item.members.map((member, index) => (
+            <Member key={index} props={member} />
           ))}
         </div>
       </div>

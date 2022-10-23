@@ -11,7 +11,7 @@ const navigation = [
   { name: 'Marine Information',
     type: 'list',
     list: [
-      { 'name': 'Local Marine Biology', href: '#' },
+      { 'name': 'Local Marine Biology', href: '/local-marine-biology' },
       { 'name': 'Local Marine Geography', href: '#' },
       { 'name': 'The Chalk Reef Marine Conservation Zone', href: '#' },
       { 'name': 'Local Concerns', href: '#' },
