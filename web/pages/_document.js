@@ -8,7 +8,6 @@ export default function Document() {
           href="https://rsms.me/inter/inter.css"
           rel="stylesheet"
         />
-        <meta name="description" content="Marine Conservation for Norfolk Action Group website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
