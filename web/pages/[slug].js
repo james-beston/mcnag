@@ -25,6 +25,7 @@ export default function Page({ data, preview }) {
     <div className="h-screen">
       <Head>
         <title>MCNAG - {page.title}</title>
+        <meta name="description" content="Marine Conservation for Norfolk Action Group website" />
       </Head>
       <Navigation />
       {router.isFallback ? (
@@ -44,9 +45,11 @@ export default function Page({ data, preview }) {
                 height={960}
               />
             </div>
+            {page.mainImageCredit && (
             <figcaption>
               <span className="text-sm text-slate-500">Image: &copy;{page.mainImageCredit}</span>
             </figcaption>
+            )}
           </figure>
           <div className="text-xl md:text-2xl text-slate-600 leading-relaxed">
             {page.intro}
