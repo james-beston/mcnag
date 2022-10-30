@@ -59,6 +59,7 @@ export const pageQuery = groq`
   mainImage,
   mainImageCredit,
   "slug": slug.current,
+  hasSections,
   sections
 }
 `

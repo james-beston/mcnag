@@ -5,6 +5,10 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Dropdown from './dropdown'
 
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
 const navigation = [
   { id: 'nav001', name: 'About', type: 'single', href: '/about', live: true },
   { id: 'nav002', name: 'Contact', type: 'single', href: '/contact', live: true },
@@ -15,11 +19,11 @@ const navigation = [
       { id: 'ls002', name: 'Local Marine Geography (under construction)', href: '#', live: false },
       { id: 'ls003', name: 'The Chalk Reef Marine Conservation Zone', href: '/the-chalk-reef', live: true },
       { id: 'ls004', name: 'Local Concerns', href: '/local-concerns', live: true },
-      { id: 'ls005', name: 'Norfolk Beach Cleaners Collective', href: '#', live: true }
+      { id: 'ls005', name: 'Norfolk Beach Cleaners Collective (under construction)', href: '#', live: false }
     ], live: true
   },
-  { id: 'nav004', name: 'How To Help', type: 'single', href: '#', live: true },
-  { id: 'nav005', name: 'Conference', type: 'single', href: '#', live: true },
+  { id: 'nav004', name: 'How To Help', type: 'single', href: '/how-can-you-help', live: true },
+  { id: 'nav005', name: 'Conference', type: 'single', href: '/2022-mcnag-conference', live: true },
   { id: 'nav006', name: 'Reports', type: 'single', href: '#', live: true },
 ]
 
@@ -115,7 +119,11 @@ export default function Navigation() {
                       <a
                         key={nav.id}
                         href={nav.href}
-                        className="block mx-2 px-3 py-1.5 rounded-md text-sm text-mcnag-dark-blue hover:bg-blue-50"
+                        className={classNames(
+                          nav.live
+                          ? "text-mcnag-dark-blue hover:bg-blue-50"
+                          : "text-slate-400 cursor-not-allowed",
+                          "block mx-2 px-3 py-1.5 rounded-md text-sm")}
                       >
                         {nav.name}
                       </a>

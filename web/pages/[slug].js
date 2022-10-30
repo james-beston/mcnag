@@ -55,14 +55,23 @@ export default function Page({ data, preview }) {
             {page.intro}
           </div>
         </div>
-        <div className="grid grid-cols-6 lg:mt-12">
-          <div className="col-span-full lg:col-span-1">
-            <SectionMenu sections={page.sections} />
-          </div>
-          <div className="col-span-full lg:col-span-4">
-            <Section sections={page.sections} />
-          </div>
-        </div>
+        {page.hasSections
+          ? (
+            <div className="grid grid-cols-6 lg:mt-12">
+              <div className="col-span-full lg:col-span-1">
+                <SectionMenu sections={page.sections} />
+              </div>
+              <div className="col-span-full lg:col-span-4">
+                <Section sections={page.sections} />
+              </div>
+            </div>
+          )
+          : ( 
+            <div className="lg:mt-12">
+              <Section sections={page.sections} />
+            </div>
+          )
+        }
         </>
         )}
         <Footer />
