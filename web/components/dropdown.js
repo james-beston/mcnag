@@ -39,14 +39,24 @@ export default function Dropdown({ props }) {
             <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="relative grid gap-6 bg-blue-50 px-5 py-6 sm:gap-8 sm:p-8">
-                  {props.list.map((item, index) => (
+                  {props.list.map((item) => (
                     <a
-                      key={`dd${index}`}
+                      key={item.id}
                       href={item.href}
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-blue-100"
+                      className={classNames(
+                        item.live
+                        ? "hover:bg-blue-100 cursor-pointer"
+                        : "cursor-not-allowed",
+                        "-m-3 p-3 flex items-start rounded-lg"
+                      )}
                     >
                       <div className="ml-0">
-                        <p className="text-sm font-medium text-mcnag-dark-blue">{item.name}</p>
+                        <p className={classNames(
+                          item.live
+                          ? "text-mcnag-dark-blue"
+                          : "text-slate-400",
+                          "text-sm font-medium"
+                        )}>{item.name}</p>
                       </div>
                     </a>
                   ))}

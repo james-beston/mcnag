@@ -16,9 +16,9 @@ export default function Member({ props }) {
         />
       </div>
       <h3 className="text-lg font-medium text-slate-700 leading-6">{name}</h3>
-      <p className="prose text-slate-500">
+      <div className="prose text-slate-500">
         <PortableText value={bio} />
-      </p>
+      </div>
     </div>
   )
 }

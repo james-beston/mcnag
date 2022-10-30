@@ -37,8 +37,8 @@ export default function About({ data, preview }) {
         </div>
         <h2 className="text-3xl lg:text-5xl font-bold text-mcnag-dark-blue">Board Members</h2>
         <div className="space-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-12">
-          {item.members.map((member, index) => (
-            <Member key={index} props={member} />
+          {item.members.map((member) => (
+            <Member key={member.slug} props={member} />
           ))}
         </div>
       </div>

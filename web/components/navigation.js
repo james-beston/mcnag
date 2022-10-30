@@ -6,21 +6,21 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Dropdown from './dropdown'
 
 const navigation = [
-  { name: 'About', type: 'single', href: '/about' },
-  { name: 'Contact', type: 'single', href: '/contact' },
-  { name: 'Marine Information',
+  { id: 'nav001', name: 'About', type: 'single', href: '/about', live: true },
+  { id: 'nav002', name: 'Contact', type: 'single', href: '/contact', live: true },
+  { id: 'nav003', name: 'Marine Information',
     type: 'list',
     list: [
-      { 'name': 'Local Marine Biology', href: '/local-marine-biology' },
-      { 'name': 'Local Marine Geography', href: '#' },
-      { 'name': 'The Chalk Reef Marine Conservation Zone', href: '#' },
-      { 'name': 'Local Concerns', href: '#' },
-      { 'name': 'Norfolk Beach Cleaners Collective', href: '#' }
-    ]
+      { id: 'ls001', name: 'Local Marine Biology', href: '/local-marine-biology', live: true },
+      { id: 'ls002', name: 'Local Marine Geography (under construction)', href: '#', live: false },
+      { id: 'ls003', name: 'The Chalk Reef Marine Conservation Zone', href: '/the-chalk-reef', live: true },
+      { id: 'ls004', name: 'Local Concerns', href: '/local-concerns', live: true },
+      { id: 'ls005', name: 'Norfolk Beach Cleaners Collective', href: '#', live: true }
+    ], live: true
   },
-  { name: 'How To Help', type: 'single', href: '#' },
-  { name: 'Conference', type: 'single', href: '#' },
-  { name: 'Reports', type: 'single', href: '#' },
+  { id: 'nav004', name: 'How To Help', type: 'single', href: '#', live: true },
+  { id: 'nav005', name: 'Conference', type: 'single', href: '#', live: true },
+  { id: 'nav006', name: 'Reports', type: 'single', href: '#', live: true },
 ]
 
 export default function Navigation() {
@@ -52,15 +52,15 @@ export default function Navigation() {
                 </div>
               </div>
               <div className="hidden space-x-8 md:flex md:ml-10 items-center">
-                {navigation.map((item, index) => (
+                {navigation.map((item) => (
                   item.type === 'single'
                   ? (
-                    <Link key={index} href={item.href}>
+                    <Link key={item.id} href={item.href}>
                       <a className="text-sm font-medium text-white hover:text-blue-100">
                         {item.name}
                       </a>
                     </Link>
-                  ) : <Dropdown props={item} />
+                  ) : <Dropdown key={item.id} props={item} />
                 ))}
               </div>
             </div>
@@ -98,11 +98,11 @@ export default function Navigation() {
               </div>
               <div className="pt-5 pb-6">
                 <div className="px-2 space-y-1">
-                  {navigation.map((item, index) => (
+                  {navigation.map((item) => (
                     item.type === 'single'
                   ? (
                       <a
-                        key={index}
+                        key={item.id}
                         href={item.href}
                         className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-blue-50"
                       >
@@ -111,9 +111,9 @@ export default function Navigation() {
                   ) : (
                     <>
                     <p className="block px-3 py-2 rounded-md text-base font-medium text-gray-500">{item.name}</p>
-                    {item.list.map((nav, index) => (
+                    {item.list.map((nav) => (
                       <a
-                        key={index}
+                        key={nav.id}
                         href={nav.href}
                         className="block mx-2 px-3 py-1.5 rounded-md text-sm text-mcnag-dark-blue hover:bg-blue-50"
                       >
