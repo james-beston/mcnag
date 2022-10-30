@@ -41,6 +41,11 @@ export default {
       type: 'text',
     },
     {
+      name: 'hasSections',
+      title: 'Navigable Sections?',
+      type: 'boolean'
+    },
+    {
       name: 'sections',
       title: 'Sections',
       type: 'array',
@@ -49,4 +54,7 @@ export default {
       ],
     }
   ],
+  initialValue: {
+    hasSections: true,
+  }
 }
