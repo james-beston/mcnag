@@ -11,7 +11,11 @@ import Image from 'next/image'
 export default function Contact({ data, feed, preview }) {
   const [item] = data.contact
   const posts = feed.data
-  console.log(posts)
+
+  const isImage = (url) => {
+    const test = new RegExp('[^>]*[^/].(?:jpg|jpeg|png|webp|avif|gif|svg)').test(url)
+    return test
+  }
   return (
     <div className='h-screen'>
       <Head>
@@ -60,7 +64,12 @@ export default function Contact({ data, feed, preview }) {
             <div className="" key={post.id}>
               <div className="relative aspect-square shadow-lg bg-black">
                 <a href={post.permalink}>
-                  <Image src={post.media_url} alt={post.caption} layout="fill" objectFit="cover" />
+                  {isImage(post.media_url)
+                    ? <Image src={post.media_url} alt={post.caption} layout="fill" objectFit="cover" />
+                    : <video className="h-full overflow-hidden">
+                        <source src={post.media_url} />
+                      </video>
+                  }
                 </a>
               </div>
               <div className="text-sm text-slate-600 mt-6">

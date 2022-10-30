@@ -4,7 +4,8 @@ const nextConfig = {
   images: {
     domains: [
       'cdn.sanity.io',
-      'scontent.cdninstagram.com'
+      'scontent.cdninstagram.com',
+      'video.cdninstagram.com'
     ],
   },
 }
